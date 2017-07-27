@@ -1,16 +1,21 @@
+"""
+Radiative losses
+"""
+
 from datetime import datetime
 
 import numpy as np
 import matplotlib.pyplot as plt
-np.seterr(over='ignore')
 
-from .Continuum import Continuum
-from .Ion import ion
+from ChiantiPy.base import specTrails
+from ChiantiPy.continuum import Continuum
+from ChiantiPy.ion import ion
 import ChiantiPy.tools.data as chdata
 import ChiantiPy.tools.constants as const
 import ChiantiPy.tools.util as util
 import ChiantiPy.Gui as chGui
-from ChiantiPy.base import specTrails
+
+np.seterr(over='warn')
 
 
 class radLoss(specTrails):

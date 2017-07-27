@@ -5,7 +5,7 @@ Tests for the spectrum and bunch classes
 import numpy as np
 import pytest
 
-from ChiantiPy.core import spectrum, bunch
+from ChiantiPy.spectrum import spectrum, bunch
 
 # set temperature, density, wavelength
 temperature_1 = np.array([1e+6,4e+6,1e+7])

@@ -5,7 +5,7 @@ Tests for the radloss class
 import pytest
 import numpy as np
 
-from ChiantiPy.core import radLoss
+from ChiantiPy.radloss import radLoss
 
 temperature = np.logspace(5,8,20)
 density = 1e+9

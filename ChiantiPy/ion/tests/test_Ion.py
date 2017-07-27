@@ -5,7 +5,7 @@ Tests for the ion class.
 import numpy as np
 import pytest
 
-from ChiantiPy.core import ion
+from ChiantiPy.ion import ion
 import ChiantiPy.tools as ch_tools
 
 # use an ion with relatively small chianti files

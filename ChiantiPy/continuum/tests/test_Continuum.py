@@ -5,7 +5,7 @@ Tests for the continuum class
 import numpy as np
 import pytest
 
-from ChiantiPy.core import Continuum
+from ChiantiPy.continuum import Continuum
 
 # test ion
 test_ion = 'fe_15'

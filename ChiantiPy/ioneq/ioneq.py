@@ -10,7 +10,7 @@ import ChiantiPy.tools.io as io
 import ChiantiPy.tools.constants as const
 import ChiantiPy.tools.data as chdata
 
-from .Ion import ion
+from ChiantiPy.ion import ion
 
 
 class ioneq(object):

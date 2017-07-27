@@ -8,7 +8,8 @@ try:
 except ImportError:
     warnings.warn("ipyparallel not found. You won't be able to use the ipymspectrum module")
 
-import ChiantiPy
+from ChiantiPy.ion import ion
+from ChiantiPy.continuum import Continuum
 import ChiantiPy.tools.data as chdata
 import ChiantiPy.tools.constants as const
 import ChiantiPy.tools.filters as chfilters
@@ -283,7 +284,7 @@ def doAll(inpt):
         wavelength = inpt[3]
         abund = inpt[4]
         em = inpt[5]
-        FF = ChiantiPy.core.Continuum(ionS, temperature, abundance=abund, emission_measure=em)
+        FF = Continuum(ionS, temperature, abundance=abund, emission_measure=em)
         FF.calculate_free_free_emission(wavelength)
         # can not do a deep copy of
 #        return [ionS, calcType, copy.deepcopy(cont)]
@@ -293,7 +294,7 @@ def doAll(inpt):
         wavelength = inpt[3]
         abund = inpt[4]
         em = inpt[5]
-        cont = ChiantiPy.core.Continuum(ionS, temperature, abundance=abund, emission_measure=em)
+        cont = Continuum(ionS, temperature, abundance=abund, emission_measure=em)
         try:
             cont.calculate_free_bound_emission(wavelength)
             return [ionS, calcType, {'rate': cont.calculate_free_bound_emission}]
@@ -309,7 +310,7 @@ def doAll(inpt):
         abund = inpt[7]
         em = inpt[8]
         doContinuum = inpt[9]
-        thisIon = ChiantiPy.core.ion(ionS, temperature, density, abundance=abund)
+        thisIon = ion(ionS, temperature, density, abundance=abund)
         thisIon.intensity(wvlRange = wvlRange, allLines = allLines, em=em)
         if 'errorMessage' not in thisIon.Intensity.keys():
             thisIon.spectrum(wavelength,  filter=filter, allLines=allLines)
