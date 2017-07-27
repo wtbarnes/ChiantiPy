@@ -2,5 +2,5 @@
 Base classes for ion- and spectrum-related objects.
 """
 
-from ._IonTrails import ionTrails
-from ._SpecTrails import specTrails
+from .base_ion import ionTrails
+from .base_spectrum import specTrails
