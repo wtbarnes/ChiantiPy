@@ -5,12 +5,11 @@ import numpy as np
 from scipy import interpolate
 import matplotlib.pyplot as plt
 
+from ChiantiPy import ion
 import ChiantiPy.tools.util as util
 import ChiantiPy.tools.io as io
 import ChiantiPy.tools.constants as const
 import ChiantiPy.tools.data as chdata
-
-from ChiantiPy.ion import ion
 
 
 class ioneq(object):

@@ -52,8 +52,21 @@ class ion(ionTrails, specTrails):
         (:math:`\mathrm{cm}^{-5}`.), for the volumetric emission measure
         :math:`\mathrm{\int \, n_e \, n_H \, dV}` (:math:`\mathrm{cm^{-3}}`).
 
+    Examples
+    --------
+    >>> import numpy as np
+    >>> from ChiantiPy import ion
+    >>> t = 10.**(5.8+0.1*np.arange(11))
+    >>> dens = 1.e+9
+    >>> fe14 = ion('fe_14')
+    >>> fe14.populate()
+
     Attributes
     ----------
+    Abundance : `float`
+        Abundance of the element relative to H
+    AbundanceName : `str`
+        Name of the CHIANTI abundance set used
     IonStr : `str`
         Name of element plus ion, e.g. `fe_12` for Fe XII
     Z : `int`
@@ -78,7 +91,8 @@ class ion(ionTrails, specTrails):
 
     Notes
     -----
-    The keyword arguments temperature, eDensity, radTemperature, rStar, em must all be either a float or have the same dimension as the rest if specified as lists, tuples or arrays.
+    The keyword arguments temperature, eDensity, radTemperature, rStar, em must all be either a
+    float or have the same dimension as the rest if specified as lists, tuples or arrays.
 
     The `Defaults` dict should have the following keys:
 
@@ -1967,8 +1981,8 @@ class ion(ionTrails, specTrails):
         units:  ergs s^-1 str^-1
 
         Does not include elemental abundance or ionization fraction
-        
-        Wavelengths are sorted        
+
+        Wavelengths are sorted
 
         set allLines = 1 to include unidentified lines
         """

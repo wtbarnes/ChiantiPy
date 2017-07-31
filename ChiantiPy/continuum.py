@@ -7,7 +7,7 @@ import numpy as np
 from scipy.interpolate import splev, splrep
 from scipy.ndimage import map_coordinates
 
-from ChiantiPy.ioneq import ioneq
+from ChiantiPy import ioneq
 import ChiantiPy.tools.data as ch_data
 import ChiantiPy.tools.util as ch_util
 import ChiantiPy.tools.io as ch_io

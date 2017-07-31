@@ -38,6 +38,11 @@ except ImportError:
 # Note this if statement is only here to allow chiantipy to be imported before
 # it's compiled.
 if not _ASTROPY_SETUP_:
-    ## For ChiantiPy
+    # Versioning
     from . import version
     Version = version._last_generated_version
+    # ChiantiPy core classes
+    from .ion import ion
+    from .ioneq import ioneq
+    from .continuum import Continuum
+    from .radloss import radLoss

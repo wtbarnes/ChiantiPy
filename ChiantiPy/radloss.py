@@ -8,8 +8,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 from ChiantiPy.base import specTrails
-from ChiantiPy.continuum import Continuum
-from ChiantiPy.ion import ion
+from ChiantiPy import Continuum
+from ChiantiPy import ion
 import ChiantiPy.tools.data as chdata
 import ChiantiPy.tools.constants as const
 import ChiantiPy.tools.util as util

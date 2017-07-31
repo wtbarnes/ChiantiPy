@@ -6,7 +6,7 @@ import numpy as np
 import pytest
 
 import ChiantiPy.tools.util as util
-from ChiantiPy.ioneq import ioneq
+from ChiantiPy import ioneq
 
 temperature = np.logspace(4,9,50)
 # Element and Z should represent the same element

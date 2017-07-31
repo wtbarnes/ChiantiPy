@@ -3,8 +3,8 @@ from datetime import datetime
 
 import numpy as np
 
-from ChiantiPy.ion import ion
-from ChiantiPy.continuum import Continuum
+from ChiantiPy import ion
+from ChiantiPy import Continuum
 import ChiantiPy.tools.data as chdata
 import ChiantiPy.tools.constants as const
 import ChiantiPy.tools.filters as chfilters

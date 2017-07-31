@@ -8,8 +8,8 @@ try:
 except ImportError:
     warnings.warn("ipyparallel not found. You won't be able to use the ipymspectrum module")
 
-from ChiantiPy.ion import ion
-from ChiantiPy.continuum import Continuum
+from ChiantiPy import ion
+from ChiantiPy import Continuum
 import ChiantiPy.tools.data as chdata
 import ChiantiPy.tools.constants as const
 import ChiantiPy.tools.filters as chfilters
