@@ -1,5 +1,5 @@
-ChiantiPy Tools
-================
+Tools
+======
 
 .. automodapi:: ChiantiPy.tools.archival
 .. automodapi:: ChiantiPy.tools.constants

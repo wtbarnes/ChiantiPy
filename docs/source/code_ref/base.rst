@@ -1,4 +1,4 @@
-ChiantiPy Base Classes
+Base Classes
 ========================
 
 .. automodapi:: ChiantiPy.base
